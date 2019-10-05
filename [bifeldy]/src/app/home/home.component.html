@@ -1,0 +1,108 @@
+<!-- Bagian Atas -->
+<div class="row mt-3">
+
+    <!-- Bagian Atas Full Kiri Kanan -->
+    <div class="col-12 mt-3">
+        <div class="card">
+            <div class="card-header">
+                <h5>Rilisan Musim Ini</h5>
+                <div class="row">
+                    <div class="col-5"><b>Judul Anime</b></div>
+                    <div class="col-3"><b>Staff Pekerja</b></div>
+                    <div class="col-2 text-right"><b>Total Progress Rilisan</b></div>
+                    <div class="col-2 text-right"><b>Tanggal Rilis Terakhir</b></div>
+                </div>
+            </div>
+            <div class="list-group">
+                <a routerLink="/timeline/anime.id" class="border-left-0 border-right-0 border-bottom-0 list-group-item list-group-item-action">
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="media">
+                                <img src="anime.imgUrl" class="align-self-start mr-3" alt="anime.title" width="100" />
+                                <div class="media-body">
+                                    <h6 class="mt-0 mb-0">anime.title</h6>
+                                    <small>anime.season.name - anime.season.year</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div><small>anime.staff[0].name (anime.staff.job)</small></div>
+                            <div><small>anime.staff[1].name (anime.staff.job)</small></div>
+                            <div><small>anime.staff[2].name (anime.staff.job)</small></div>
+                        </div>
+                        <div class="col-2 text-right">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%"></div>
+                            </div>
+                            <small>anime.episode / anime.total</small>
+                        </div>
+                        <div class="col-2 text-right">
+                            <div>anime.release.date</div>
+                            <small>anime.release.time</small>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <a routerLink="/timeline" class="card-footer text-muted text-right">
+                Lihat Rilisan Lainnya
+                <i class="fa fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<!-- Bagian Bawah -->
+<div class="row mt-3">
+
+    <!-- Bagian Kiri -->
+    <div class="col-sm-12 col-md-6 mt-3">
+
+        <!-- Bagian Atas -->
+        <div class="card mb-3">
+            <h5 class="card-header">
+                Berita & Pengumuman
+            </h5>
+            <div class="list-group">
+                <a routerLink="/news/news.id" class="border-left-0 border-right-0 border-bottom-0 list-group-item list-group-item-action">
+                    <div class="row">
+                        <div class="col-2">
+                            <span class="badge badge-primary">news.tag</span>
+                        </div>
+                        <div class="col-5">news.title</div>
+                        <div class="col-2 text-right">news.user</div>
+                        <div class="col-3 text-right">news.date</div>
+                    </div>
+                </a>
+            </div>
+            <a routerLink="/news" class="card-footer text-muted text-right">
+                Cek Berita & Pengumuman Lainnya
+                <i class="fa fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <!-- Bagian Bawah -->
+        <div class="card">
+            <h5 class="card-header">
+                Riwayat Perubahan Portal Server
+            </h5>
+            <div class="card-body">
+                <h5 class="card-title">history[0].title</h5>
+                <p class="card-text">history[0].description</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bagian Kanan -->
+    <div class="col-sm-12 col-md-6 mt-3">
+        <div class="card">
+            <h5 class="card-header">
+                Lobi Obrolan
+            </h5>
+            <div class="card-body">
+                lobby.content
+            </div>
+        </div>
+    </div>
+
+</div>
