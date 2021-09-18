@@ -6,7 +6,7 @@
         <v-btn icon href="mailto:bias.astho@gmail.com">
           <v-icon>mdi-at</v-icon>
         </v-btn>
-        <v-btn icon href="https://linkedin.com/in/Bifeldy/">
+        <v-btn icon href="https://linkedin.com/in/Bifeldy">
           <v-icon>mdi-linkedin</v-icon>
         </v-btn>
         <v-btn icon href="https://facebook.com/Bifeldy">
