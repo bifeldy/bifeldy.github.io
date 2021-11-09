@@ -171,7 +171,7 @@
                   <v-card-text class="px-0">
                     <div>
                       <span>{{ w.job }}</span>
-                      <span class="me-3" style="position: absolute; right: 0;">{{ w.type }}</span>
+                      <span class="me-4" style="position: absolute; right: 0;">{{ w.type }}</span>
                     </div>
                     <p class="text-h5 text-primary">{{ w.company }}</p>
                     <p class="mb-0">{{ w.date }}</p>
@@ -180,7 +180,7 @@
                 </v-col>
               </v-row>
               <v-row v-if="active">
-                <v-card-text class="ma-3" v-if="active">
+                <v-card-text class="ma-4" v-if="active">
                   <h3 class="text-primary mb-5">{{ w.industry }}</h3>
                   <p class="mb-0">{{ w.description }}</p>
                 </v-card-text>
@@ -235,7 +235,7 @@
       works: [
         {
           job: '.NET Software Engineer',
-          type: 'Full Stack, Full-time',
+          type: 'Full Stack, Full-Time',
           company: 'Indomaret Group',
           industry: 'Warehouse & Logistics.',
           location: 'Jakarta, Indonesia',
