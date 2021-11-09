@@ -155,6 +155,72 @@
       </v-col>
     </v-row>
     <v-row align="center" class="text-center mb-5">
+      <v-col cols="12" align="start">
+        <h2>What I'm Doing</h2>
+        <v-divider></v-divider>
+      </v-col>
+      <v-col cols="12" align="start">
+        <v-slide-group show-arrows>
+          <v-slide-item class="mx-3" v-for="w in works" :key="w.date" v-slot="{ active, toggle }">
+            <v-card class="ma-3" width="512" @click="toggle">
+              <v-row v-if="!active">
+                <v-col cols="4">
+                  <v-img :src="require(`@/assets/${w.image}`)"></v-img>
+                </v-col>
+                <v-col cols="8">
+                  <v-card-text class="px-0">
+                    <div>
+                      <span>{{ w.job }}</span>
+                      <span class="me-3" style="position: absolute; right: 0;">{{ w.type }}</span>
+                    </div>
+                    <p class="text-h5 text-primary">{{ w.company }}</p>
+                    <p class="mb-0">{{ w.date }}</p>
+                    <p class="mb-0">{{ w.location }}</p>
+                  </v-card-text>
+                </v-col>
+              </v-row>
+              <v-row v-if="active">
+                <v-card-text class="ma-3" v-if="active">
+                  <h3 class="text-primary mb-5">{{ w.industry }}</h3>
+                  <p class="mb-0">{{ w.description }}</p>
+                </v-card-text>
+              </v-row>
+            </v-card>
+          </v-slide-item>
+        </v-slide-group>
+      </v-col>
+    </v-row>
+    <v-row align="center" class="text-center mb-5">
+      <v-col cols="12" align="start">
+        <h2>Research &amp; Paper Work</h2>
+        <v-divider></v-divider>
+      </v-col>
+      <v-col cols="12" align="start">
+        <v-timeline align-top dense>
+          <v-timeline-item color="pink" small v-for="p in papers" :key="p.date">
+            <v-row class="pt-1">
+              <v-col cols="12" sm="3">
+                {{ p.publisher }} <br />
+                {{ p.date }}
+              </v-col>
+              <v-col>
+                <strong>{{ p.title }}</strong>
+                <div class="text-caption mb-2">
+                  {{ p.description }} <br />
+                  <a :href="p.url" class="text-decoration-none">
+                    {{ p.url }}
+                  </a>
+                </div>
+                <v-avatar v-for="i in p.images" :key="i">
+                  <v-img :src="i"></v-img>
+                </v-avatar>
+              </v-col>
+            </v-row>
+          </v-timeline-item>
+        </v-timeline>
+      </v-col>
+    </v-row>
+    <v-row align="center" class="text-center mb-5">
       <v-col cols="12">
         <span class="text-primary"> ~ So Bad Yet, So Good! (｡&gt;﹏&lt;｡) ~ </span>
       </v-col>
@@ -166,17 +232,64 @@
   export default {
     name: 'Home',
     data: () => ({
-      portfolio: [
+      works: [
         {
-          title: 'Content Title',
-          description: 'Content Description',
-          type: 'Open Source',
+          job: '.NET Software Engineer',
+          type: 'Full Stack, Full-time',
+          company: 'Indomaret Group',
+          industry: 'Warehouse & Logistics.',
+          location: 'Jakarta, Indonesia',
+          date: '2020 - present',
+          image: 'indomaret.jpg',
+          description: 'Create and develop warehouse systems, websites and desktop applications, ranging from processing, management, automation, job scheduling, monitoring to reporting used in all distribution centers on a national scale throughout Indonesia.'
+        },
+        {
+          job: 'Angular Web. Developer',
+          type: 'Frond End, Part-Time',
+          company: 'MacroAd',
+          industry: 'Digital Advertising.',
+          location: 'Banten, Indonesia',
+          date: '2019 - 2020',
+          image: 'macroad.jpg',
+          description: 'Create a website that is used by users in general and also a special page for Admin to manage it.'
+        },
+        {
+          job: 'Computer Lab. Assistant',
+          type: 'Full Stack, Part-Time',
+          company: 'Univ. Multimedia Nusantara',
+          industry: 'Teach Programming Course.',
+          location: 'Banten, Indonesia',
+          date: '2017 - 2019',
+          image: 'umn.jpg',
+          description: 'Algorithms & Data Structures, Database Systems, Graphics & Animations for game development and Website Development.'
+        }
+      ],
+      papers: [
+        {
+          title: 'Go-Ethereum for Electronic Voting System Using Clique as Proof-of-Authority',
+          description: 'Telkomnika, Vol 19, No 5: October 2021. Pp 1565-1572.',
+          url: 'https://dx.doi.org/10.12928/telkomnika.v19i5.20415',
+          publisher: 'Telkomnika',
+          date: '01 October 2021',
           images: [
-            'https://via.placeholder.com/256?text=1',
-            'https://via.placeholder.com/256?text=2',
-            'https://via.placeholder.com/256?text=3',
-            'https://via.placeholder.com/256?text=4'
-          ],
+            'https://avataaars.io/?avatarStyle=Circle&topType=LongHairFrida&accessoriesType=Kurt&hairColor=Red&facialHairType=BeardLight&facialHairColor=BrownDark&clotheType=GraphicShirt&clotheColor=Gray01&graphicType=Skull&eyeType=Wink&eyebrowType=RaisedExcitedNatural&mouthType=Disbelief&skinColor=Brown',
+            'https://avataaars.io/?avatarStyle=Circle&topType=ShortHairFrizzle&accessoriesType=Prescription02&hairColor=Black&facialHairType=MoustacheMagnum&facialHairColor=BrownDark&clotheType=BlazerSweater&clotheColor=Black&eyeType=Default&eyebrowType=FlatNatural&mouthType=Default&skinColor=Tanned',
+            'https://avataaars.io/?avatarStyle=Circle&topType=LongHairMiaWallace&accessoriesType=Sunglasses&hairColor=BlondeGolden&facialHairType=Blank&clotheType=BlazerSweater&eyeType=Surprised&eyebrowType=RaisedExcited&mouthType=Smile&skinColor=Pale'
+          ]
+        },
+        {
+          title: 'A Secured Online Voting System by Using Blockchain as the Medium',
+          description: 'The Smart Cyber Ecosystem for Sustainable Development, Chapter 21.',
+          url: 'https://doi.org/10.1002/9781119761655.ch21',
+          publisher: 'Scrivener Publishing LLC',
+          date: '12 September 2021',
+          images: [
+            'https://avataaars.io/?avatarStyle=Circle&topType=LongHairDreads&accessoriesType=Prescription01&hairColor=BrownDark&facialHairType=BeardMajestic&facialHairColor=Platinum&clotheType=GraphicShirt&clotheColor=Gray02&graphicType=Skull&eyeType=Default&eyebrowType=UpDown&mouthType=ScreamOpen&skinColor=Black',
+            'https://avataaars.io/?avatarStyle=Circle&topType=ShortHairFrizzle&accessoriesType=Prescription02&hatColor=Gray02&hairColor=BrownDark&facialHairType=BeardMajestic&facialHairColor=Blonde&clotheType=Overall&clotheColor=Gray02&graphicType=Diamond&eyeType=Dizzy&eyebrowType=RaisedExcited&mouthType=Vomit&skinColor=Yellow',
+            'https://avataaars.io/?avatarStyle=Circle&topType=LongHairFrida&accessoriesType=Sunglasses&hairColor=Brown&facialHairType=MoustacheMagnum&facialHairColor=Blonde&clotheType=ShirtVNeck&clotheColor=Gray02&eyeType=Happy&eyebrowType=RaisedExcitedNatural&mouthType=Serious&skinColor=Tanned',
+            'https://avataaars.io/?avatarStyle=Circle&topType=Eyepatch&accessoriesType=Prescription02&hairColor=SilverGray&facialHairType=MoustacheMagnum&facialHairColor=BrownDark&clotheType=Hoodie&clotheColor=Blue03&eyeType=WinkWacky&eyebrowType=Default&mouthType=Tongue&skinColor=Tanned',
+            'https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Round&hairColor=Blue&facialHairType=Blank&facialHairColor=Brown&clotheType=ShirtScoopNeck&clotheColor=Gray01&eyeType=Cry&eyebrowType=Default&mouthType=Sad&skinColor=Pale'
+          ]
         }
       ]
     }),
