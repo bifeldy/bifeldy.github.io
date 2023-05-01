@@ -4,7 +4,7 @@
       <v-col cols="12" style="position: absolute; top: calc(100vh - 64px); width: 100%; left: 0px;">
         <div class="mb-5">
           <v-icon class="pb-1 mr-1">mdi-console</v-icon>
-          A Fullstack Developer, currently focusing on Angular, React, Vue, NodeJS and .NET Technologies
+          Fullstack Dev. - Mainly :: Node, Deno & .NET
         </div>
       </v-col>
       <v-col cols="12">
@@ -96,9 +96,6 @@
                           <v-btn icon x-large>
                             <v-icon>mdi-google-cloud</v-icon>
                           </v-btn>
-                          <v-btn icon x-large>
-                            <v-icon>mdi-digital-ocean</v-icon>
-                          </v-btn>
                         </v-col>
                       </v-row>
                       <v-row>
@@ -168,11 +165,11 @@
                   <v-img :src="require(`@/assets/${w.image}`)"></v-img>
                 </v-col>
                 <v-col cols="8">
-                  <v-card-text class="px-0">
-                    <div>
+                  <v-card-text class="text-center px-0">
+                    <p class="text-start">
                       <span>{{ w.job }}</span>
                       <span class="me-4" style="position: absolute; right: 0;">{{ w.type }}</span>
-                    </div>
+                    </p>
                     <p class="text-h5 text-primary">{{ w.company }}</p>
                     <p class="mb-0">{{ w.date }}</p>
                     <p class="mb-0">{{ w.location }}</p>
@@ -180,7 +177,7 @@
                 </v-col>
               </v-row>
               <v-row v-if="active">
-                <v-card-text class="ma-4" v-if="active">
+                <v-card-text class="text-start ma-4" v-if="active">
                   <h3 class="text-primary mb-5">{{ w.industry }}</h3>
                   <p class="mb-0">{{ w.description }}</p>
                 </v-card-text>
@@ -198,7 +195,7 @@
       <v-col cols="12" align="start">
         <v-timeline align-top dense>
           <v-timeline-item color="pink" small v-for="p in papers" :key="p.date">
-            <v-row class="pt-1">
+            <v-row class="pt-1 text-start">
               <v-col cols="12" sm="3">
                 {{ p.publisher }} <br />
                 {{ p.date }}

@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar fixed dense elevate-on-scroll>
+    <v-app-bar fixed dense elevate-on-scroll class="pa-0">
       <v-container class="pa-0 fill-height">
         <v-spacer></v-spacer>
         <v-btn icon href="mailto:bias.astho@gmail.com">
