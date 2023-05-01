@@ -152,7 +152,7 @@
       </v-col>
     </v-row>
     <v-row align="center" class="text-center mb-5">
-      <v-col cols="12" align="start">
+      <v-col cols="12" align="start" class="text-start">
         <h2>What I'm Doing</h2>
         <v-divider></v-divider>
       </v-col>
@@ -188,7 +188,7 @@
       </v-col>
     </v-row>
     <v-row align="center" class="text-center mb-5">
-      <v-col cols="12" align="start">
+      <v-col cols="12" align="start" class="text-start">
         <h2>Research &amp; Paper Work</h2>
         <v-divider></v-divider>
       </v-col>
@@ -204,7 +204,7 @@
                 <strong>{{ p.title }}</strong>
                 <div class="text-caption mb-2">
                   {{ p.description }} <br />
-                  <a :href="p.url" class="text-decoration-none">
+                  <a :href="p.url" class="text-decoration-none d-inline-block text-truncate" style="max-width: 100%;">
                     {{ p.url }}
                   </a>
                 </div>
