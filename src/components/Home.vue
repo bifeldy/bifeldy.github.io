@@ -15,10 +15,16 @@
         </h1>
         <v-divider></v-divider>
         <h2 class="subheading font-weight-regular mt-5">
-          <v-icon class="pb-1 mr-1">mdi-briefcase-outline</v-icon>
-          Software Engineer
-          <v-icon class="pb-1 my-1">mdi-map-marker-outline</v-icon>
-          Jakarta, Indonesia
+          <v-row>
+            <v-col cols="12" sm="6" class="py-0">
+              <v-icon class="pb-1 mr-1">mdi-briefcase-outline</v-icon>
+              Software Engineer
+            </v-col>
+            <v-col cols="12" sm="6" class="py-0">
+              <v-icon class="pb-1 my-1">mdi-map-marker-outline</v-icon>
+              Jakarta, Indonesia
+            </v-col>
+          </v-row>
         </h2>
       </v-col>
     </v-row>
@@ -48,7 +54,7 @@
                             Frontend
                           </h2>
                         </v-col>
-                        <v-col cols="12 py-0 px-3">
+                        <v-col cols="12" class="py-0 px-3">
                           <v-btn icon x-large>
                             <v-icon>mdi-angular</v-icon>
                           </v-btn>
@@ -69,7 +75,7 @@
                             Backend
                           </h2>
                         </v-col>
-                        <v-col cols="12 py-0 px-3">
+                        <v-col cols="12" class="py-0 px-3">
                           <v-btn icon x-large>
                             <v-icon>mdi-nodejs</v-icon>
                           </v-btn>
@@ -89,7 +95,7 @@
                             Clouds
                           </h2>
                         </v-col>
-                        <v-col cols="12 py-0 px-3">
+                        <v-col cols="12" class="py-0 px-3">
                           <v-btn icon x-large>
                             <v-icon>mdi-aws</v-icon>
                           </v-btn>
@@ -104,7 +110,7 @@
                             Others
                           </h2>
                         </v-col>
-                        <v-col cols="12 py-0 px-3">
+                        <v-col cols="12" class="py-0 px-3">
                           <v-btn icon x-large>
                             <v-icon>mdi-language-html5</v-icon>
                           </v-btn>
