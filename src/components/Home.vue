@@ -43,7 +43,7 @@
                 </v-card-title>
                 <v-card-subtitle>
                   <h3 class="subheading font-weight-regular my-3">
-                    ✨ Villagers who are interested in technological developments~ <br />
+                    ✨ Villager who are interested in technological developments~ <br />
                     📌 Interest in <b>software</b>, <b>web</b>, <b>data mining</b>, and <b>distributed systems</b> &amp; <b>networks</b>
                   </h3>
                   <v-row class="my-3">
@@ -159,7 +159,7 @@
     </v-row>
     <v-row align="center" class="text-center mb-5">
       <v-col cols="12" align="start" class="text-start">
-        <h2>What I'm Doing</h2>
+        <h2>Experience</h2>
         <v-divider></v-divider>
       </v-col>
       <v-col cols="12" align="start">
@@ -228,6 +228,32 @@
         <span class="text-primary"> ~ So Bad Yet, So Good! (｡&gt;﹏&lt;｡) ~ </span>
       </v-col>
     </v-row>
+    <v-row align="center" class="text-center mb-5">
+      <v-col cols="12" align="start" class="text-start">
+        <h2>Featured Hobby</h2>
+        <v-divider></v-divider>
+      </v-col>
+      <v-col cols="12" align="start">
+        <v-row align="center" justify="center">
+          <v-col v-for="p in projects" :key="p.name" cols="4">
+            <v-card class="mx-auto">
+              <v-img height="128" :src="p.image"></v-img>
+              <v-card-item>
+                <div class="px-3 py-3">
+                  <div class="text-overline mb-1">{{ p.name }}</div>
+                  <div class="text-h6 mb-1">{{ p.title }}</div>
+                  <div class="text-caption">{{ p.description }}</div>
+                </div>
+              </v-card-item>
+              <v-card-actions>
+                <v-btn @click="openUrl(`https://github.com/bifeldy/${p.name}`)">Open</v-btn>
+                <v-btn @click="openUrl(p.url)" v-if="p.url">Visit</v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
@@ -267,6 +293,43 @@
           description: 'Algorithms & Data Structures, Database Systems, Graphics & Animations for game development and Website Development.'
         }
       ],
+      projects:[
+        {
+          name: 'FansubID',
+          title: 'Fansub ID Main Site',
+          description: 'Indonesian Fansub Database Main Site',
+          image: 'https://raw.githubusercontent.com/bifeldy/FansubID/master/src/assets/img/banner/fansub.png',
+          url: 'https://www.fansub.id'
+        },
+        {
+          name: 'email_worker_parser',
+          title: 'username @ Fansub . ID',
+          description: 'Cloudflare E-Mail :: http://mail.fansub.id',
+          image: 'https://raw.githubusercontent.com/bifeldy/FansubID/master/src/assets/img/banner/berkas.jpg',
+          url: null
+        },
+        {
+          name: 'crawler_worker',
+          title: 'Rss Feed Crawler',
+          description: 'RSS Feed Crawler :: http://crawl.fansub.id',
+          image: 'https://raw.githubusercontent.com/bifeldy/FansubID/master/src/assets/img/banner/news.png',
+          url: null
+        },
+        {
+          name: 'ObsUtilGUI',
+          title: 'Huawei OBS Utility GUI',
+          description: 'Windows XP+ Huawei OBS Up & Down',
+          image: 'https://raw.githubusercontent.com/bifeldy/ObsUtilGUI/main/ObsUtilGUI.png',
+          url: null
+        },
+        {
+          name: 'nginx-ui',
+          title: 'Nginx-UI Dockerize',
+          description: 'NginX-UI Web Config Editor',
+          image: 'https://i.ibb.co/59myNSf/nginx-ui.png',
+          url: 'https://hub.docker.com/r/bifeldy/nginx-ui'
+        }
+      ],
       papers: [
         {
           title: 'Go-Ethereum for Electronic Voting System Using Clique as Proof-of-Authority',
@@ -296,5 +359,10 @@
         }
       ]
     }),
+    methods: {
+      openUrl: (link) => {
+        window.open(link, '_blank');
+      }
+    }
   }
 </script>
