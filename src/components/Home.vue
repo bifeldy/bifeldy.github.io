@@ -176,7 +176,7 @@
                       <span>{{ w.job }}</span>
                       <span class="me-4" style="position: absolute; right: 0;">{{ w.type }}</span>
                     </p>
-                    <p class="text-h5 text-primary">{{ w.company }}</p>
+                    <p class="text-h5 text-primary mb-1">{{ w.company }}</p>
                     <p class="mb-0">{{ w.date }}</p>
                     <p class="mb-0">{{ w.location }}</p>
                   </v-card-text>
@@ -184,7 +184,7 @@
               </v-row>
               <v-row v-if="active">
                 <v-card-text class="text-start ma-4" v-if="active">
-                  <h3 class="text-primary mb-5">{{ w.industry }}</h3>
+                  <h3 class="text-primary mb-1">{{ w.industry }}</h3>
                   <p class="mb-0">{{ w.description }}</p>
                 </v-card-text>
               </v-row>
@@ -270,7 +270,7 @@
           location: 'Jakarta, Indonesia',
           date: '2020 - present',
           image: 'indomaret.jpg',
-          description: 'Create and develop warehouse systems, websites and desktop applications, ranging from processing, management, automation, job scheduling, monitoring to reporting used in all distribution centers on a national scale throughout Indonesia.'
+          description: 'Create and develop warehouse systems, websites and desktop applications, ranging from processing, management, automation, job scheduling, monitoring to reporting, used in all distribution centers on a national scale throughout Indonesia.'
         },
         {
           job: 'Angular Web. Developer',
