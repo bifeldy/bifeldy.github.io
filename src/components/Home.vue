@@ -43,11 +43,11 @@
                 </v-card-title>
                 <v-card-subtitle>
                   <h3 class="subheading font-weight-regular my-3">
-                    ✨ Villager who are interested in technological developments~ <br />
-                    📌 Interest in <b>software</b>, <b>web</b>, <b>data mining</b>, and <b>distributed systems</b> &amp; <b>networks</b>
+                    📌 Interest in <b>software</b>, <b>web</b>, <b>data mining</b>, and <b>distributed systems</b> &amp; <b>networks</b><br />
+                    ✨ TOEIC L&R - ETS :: 670 (Exp. August 4, 2022)
                   </h3>
                   <v-row class="my-3">
-                    <v-col cols="12" sm="6">
+                    <v-col cols="12" md="6">
                       <v-row>
                         <v-col cols="12">
                           <h2 class="subheading font-weight-bold mt-3">
@@ -88,7 +88,7 @@
                         </v-col>
                       </v-row>
                     </v-col>
-                    <v-col cols="12" sm="6">
+                    <v-col cols="12" md="6">
                       <v-row>
                         <v-col cols="12">
                           <h2 class="subheading font-weight-bold mt-3">
@@ -202,7 +202,7 @@
         <v-timeline align-top dense>
           <v-timeline-item color="pink" small v-for="p in papers" :key="p.date">
             <v-row class="pt-1 text-start">
-              <v-col cols="12" sm="3">
+              <v-col cols="12" md="3">
                 {{ p.publisher }} <br />
                 {{ p.date }}
               </v-col>
@@ -235,7 +235,7 @@
       </v-col>
       <v-col cols="12" align="start">
         <v-row align="center" justify="center">
-          <v-col v-for="p in projects" :key="p.name" cols="4">
+          <v-col v-for="p in projects" :key="p.name" cols="12" sm="6" md="4">
             <v-card class="mx-auto">
               <v-img height="128" :src="p.image"></v-img>
               <v-card-item>
