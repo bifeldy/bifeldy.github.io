@@ -44,7 +44,7 @@
                 <v-card-subtitle>
                   <h3 class="subheading font-weight-regular my-3">
                     📌 Interest in <b>software</b>, <b>web</b>, <b>data mining</b>, and <b>distributed systems</b> &amp; <b>networks</b><br />
-                    ✨ TOEIC L&R - ETS :: 670 (Exp. August 4, 2022)
+                    ✨ TOEIC L&R - ETS :: 765 (Exp. March 19, 2026)
                   </h3>
                   <v-row class="my-3">
                     <v-col cols="12" md="6">
