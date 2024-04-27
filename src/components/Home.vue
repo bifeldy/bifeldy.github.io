@@ -298,21 +298,21 @@
           name: 'FansubID',
           title: 'Fansub ID Main Site',
           description: 'Indonesian Fansub Database Main Site',
-          image: 'https://raw.githubusercontent.com/bifeldy/FansubID/master/src/assets/img/banner/fansub.png',
+          image: 'https://raw.githubusercontent.com/bifeldy/FansubID/master/projects/main-site/src/assets/img/banner/fansub.png',
           url: 'https://www.fansub.id'
         },
         {
           name: 'email_worker_parser',
           title: 'username @ Fansub . ID',
           description: 'Cloudflare E-Mail :: http://mail.fansub.id',
-          image: 'https://raw.githubusercontent.com/bifeldy/FansubID/master/src/assets/img/banner/berkas.jpg',
+          image: 'https://raw.githubusercontent.com/bifeldy/FansubID/master/projects/main-site/src/assets/img/banner/berkas.jpg',
           url: null
         },
         {
           name: 'crawler_worker',
           title: 'Rss Feed Crawler',
           description: 'RSS Feed Crawler :: http://crawl.fansub.id',
-          image: 'https://raw.githubusercontent.com/bifeldy/FansubID/master/src/assets/img/banner/news.png',
+          image: 'https://raw.githubusercontent.com/bifeldy/FansubID/master/projects/main-site/src/assets/img/banner/news.png',
           url: null
         },
         {
