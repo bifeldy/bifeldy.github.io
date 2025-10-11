@@ -323,7 +323,7 @@
         </p>
         <h3 class="my-5">What now</h3>
         <p style="text-indent: 2em;">
-          Currently focusing on user-requested application development and maintenance based on user (logistics) requests or bug fixes in existing programs.
+          Currently focused on developing and maintaining applications upon user request (logistics) or fixing bugs in existing programs.
           There likely won't be any more major infrastructure development projects.
           Just reading the requirements, write SQL scripts, code in VB / C#, and chill out 😊 (in Indonesian, "🧨 jaga lilin 🧨 / keep the lights on / 🧨" when we have nothing to do).
         </p>
